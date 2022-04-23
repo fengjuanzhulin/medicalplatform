@@ -1,0 +1,48 @@
+mybatis:
+ configuration:
+  log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapUnderscoreToCamelCase: true
+spring:
+ application:
+  name: mcfxu
+ datasource:
+  driver-class-name: com.mysql.cj.jdbc.Driver
+  password: yishengainiSZY!~
+  url: jdbc:mysql://123.56.122.10:3306/db_medicalplatform?useUnicode=true&characterEncoding=utf8&useSSL=false
+  username: root
+ mvc:
+  path match:
+   matching-strategy: ANT_PATH_MATCHER
+ redis:
+  client-type: lettuce
+  host: 123.56.122.10
+  jedis:
+   pool:
+    max-active: 10
+    max-idle: 10
+    max-wait: -1ms
+    min-idle: 0
+  lettuce:
+   pool:
+    max-active: 10
+    max-idle: 10
+    max-wait: -1ms
+    min-idle: 0
+  password: youshuai~youyouqian~~
+  port: 6379
+swagger:
+ application-description: mp
+ application-name: ${spring.application.name}
+ application-version: 1.0
+ enable: true
+type: com.alibaba.druid.pool.DruidDataSource
+wxopen:
+ appid: wx28b894fc0aa0c923
+ appsecret: 4087862b2843d58e35a837f5360f99c2
+ redirect_url: http://92g832.natappfree.cc/user/wechat/user/callback
+wxpay:
+ appid: wx4a977781yrt9096k
+ appsecret: e9a4rk95a9q585v5cztr451m918swjv0
+ callback: https://api.xdclass.net/user/wechat/order/callback
+ key: rSGU9vol14x30w8mOIcLOj2FJrRrf52q
+ mer_id: 3564121853
